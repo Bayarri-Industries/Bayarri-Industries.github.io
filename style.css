@@ -447,6 +447,129 @@ footer {
     color: var(--white);
 }
 
+/* HERO LOGO */
+.hero-logo {
+    margin-bottom: 40px;
+}
+
+.hero-logo img {
+    height: 90px;
+    opacity: 0.95;
+}
+
+/* MODAL */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(6px);
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal {
+    background: #0d0d1a;
+    border: 1px solid var(--border);
+    padding: 56px 52px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    border-top: 3px solid var(--red);
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    background: none;
+    border: none;
+    color: var(--gray);
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.modal-close:hover {
+    color: var(--white);
+}
+
+.modal-label {
+    font-size: 10px;
+    letter-spacing: 0.35em;
+    color: var(--red);
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+.modal-title {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+}
+
+.modal-sub {
+    color: var(--gray);
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 32px;
+}
+
+.modal-email {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #111122;
+    border: 1px solid var(--border);
+    padding: 14px 20px;
+    margin-bottom: 24px;
+    gap: 16px;
+}
+
+.modal-email span {
+    font-size: 14px;
+    color: var(--white);
+    letter-spacing: 0.02em;
+}
+
+.copy-btn {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--gray);
+    padding: 6px 14px;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.copy-btn:hover {
+    border-color: var(--gray);
+    color: var(--white);
+}
+
+.modal-send {
+    display: block;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.modal-note {
+    font-size: 11px;
+    color: var(--gray);
+    text-align: center;
+    letter-spacing: 0.05em;
+}
+
 /* RESPONSIVE */
 @media (max-width: 900px) {
     .project-grid {

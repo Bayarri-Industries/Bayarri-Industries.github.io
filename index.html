@@ -10,6 +10,22 @@
 </head>
 <body>
 
+    <!-- CONTACT MODAL -->
+    <div class="modal-overlay" id="contactModal" onclick="closeModal()">
+        <div class="modal" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeModal()">✕</button>
+            <div class="modal-label">Contact</div>
+            <h2 class="modal-title">Bayarri Industries</h2>
+            <p class="modal-sub">For inquiries, partnerships, or general contact — reach out directly.</p>
+            <div class="modal-email">
+                <span id="emailText">bayarriindustries@gmail.com</span>
+                <button class="copy-btn" onclick="copyEmail()">Copy</button>
+            </div>
+            <a href="mailto:bayarriindustries@gmail.com" class="btn-primary modal-send">Send Email →</a>
+            <p class="modal-note">Response time: within 48 hours.</p>
+        </div>
+    </div>
+
     <!-- NAV -->
     <nav>
         <div class="nav-container">
@@ -20,7 +36,7 @@
                 <a href="#about">About</a>
                 <a href="#projects">Systems</a>
                 <a href="#ceo">Leadership</a>
-                <a href="mailto:bayarriindustries@gmail.com" class="nav-cta">Contact</a>
+                <a href="#" class="nav-cta" onclick="openModal(); return false;">Contact</a>
             </div>
         </div>
     </nav>
@@ -28,6 +44,9 @@
     <!-- HERO -->
     <section class="hero">
         <div class="hero-content">
+            <div class="hero-logo">
+                <img src="assets/logo.png" alt="Bayarri Industries">
+            </div>
             <div class="section-label">Bayarri Industries</div>
             <h1>Defense AI.<br>Built Different.</h1>
             <p class="hero-sub">We build the systems that defend what matters. AI-native, from scratch, for the next generation of warfare.</p>
@@ -113,11 +132,29 @@
                 <div class="footer-text">© 2026 Bayarri Industries. All rights reserved.</div>
                 <div class="footer-links">
                     <a href="https://github.com/Bayarri-Industries" target="_blank">GitHub</a>
-                    <a href="mailto:bayarriindustries@gmail.com">Contact</a>
+                    <a href="#" onclick="openModal(); return false;">Contact</a>
                 </div>
             </div>
         </div>
     </footer>
+
+    <script>
+        function openModal() {
+            document.getElementById('contactModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal() {
+            document.getElementById('contactModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        function copyEmail() {
+            navigator.clipboard.writeText('bayarriindustries@gmail.com');
+            const btn = document.querySelector('.copy-btn');
+            btn.textContent = 'Copied';
+            setTimeout(() => btn.textContent = 'Copy', 2000);
+        }
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+    </script>
 
 </body>
 </html>
