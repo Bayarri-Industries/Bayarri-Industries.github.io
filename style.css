@@ -47,7 +47,7 @@ nav {
 }
 
 .logo img {
-    height: 34px;
+    height: 56px;
 }
 
 .nav-links {
@@ -445,16 +445,6 @@ footer {
 
 .back-link:hover {
     color: var(--white);
-}
-
-/* HERO LOGO */
-.hero-logo {
-    margin-bottom: 40px;
-}
-
-.hero-logo img {
-    height: 90px;
-    opacity: 0.95;
 }
 
 /* MODAL */
