@@ -139,8 +139,8 @@ nav {
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--red);
-    margin-top: -36px;
-    margin-bottom: 48px;
+    margin-top: 16px;
+    margin-bottom: 28px;
 }
 
 .btn-primary {
